@@ -1,0 +1,540 @@
+/* Library Module Specific Styles */
+.library-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Library Filters */
+.library-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.library-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.library-filter-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.library-search-box {
+    position: relative;
+    min-width: 300px;
+}
+
+.library-search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.library-search-box input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.library-search-box i {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.library-select {
+    padding: 0.75rem 2rem 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: white;
+    font-size: 0.875rem;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.library-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.library-checkbox input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #d1d5db;
+}
+
+/* Library Stats */
+.library-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.library-stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-left: 4px solid #3b82f6;
+}
+
+.library-stat-card.warning {
+    border-left-color: #ef4444;
+    background: #fef2f2;
+}
+
+.library-stat-card.success {
+    border-left-color: #10b981;
+    background: #f0fdf4;
+}
+
+.library-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.library-stat-label {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Book Cards */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.book-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+}
+
+.book-card.unavailable {
+    opacity: 0.7;
+    background: #f9fafb;
+}
+
+.book-card.unavailable::after {
+    content: 'UNAVAILABLE';
+    position: absolute;
+    top: 1rem;
+    right: -2rem;
+    background: #ef4444;
+    color: white;
+    padding: 0.25rem 2rem;
+    transform: rotate(45deg);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.book-cover {
+    float: left;
+    margin-right: 1.5rem;
+    width: 100px;
+    height: 140px;
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-content {
+    overflow: hidden;
+}
+
+.book-header {
+    margin-bottom: 1rem;
+}
+
+.book-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+}
+
+.book-isbn {
+    color: #6b7280;
+    font-size: 0.75rem;
+    font-family: monospace;
+}
+
+.book-meta {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.book-meta p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+}
+
+.book-meta strong {
+    color: #374151;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.book-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Loan and Reservation Cards */
+.loan-grid,
+.reservation-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.loan-card,
+.reservation-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.2s;
+}
+
+.loan-card.overdue {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.loan-card.overdue .loan-header {
+    border-bottom-color: #fecaca;
+}
+
+.reservation-card.expired {
+    border-color: #f59e0b;
+    background: #fffbeb;
+}
+
+.loan-header,
+.reservation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.loan-title,
+.reservation-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.loan-details,
+.reservation-details {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.loan-details p,
+.reservation-details p {
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+}
+
+.loan-status {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.loan-status.overdue {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.loan-status.warning {
+    background: #fffbeb;
+    color: #d97706;
+    border: 1px solid #fed7aa;
+}
+
+.loan-status.good {
+    background: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+/* Admin Actions */
+.admin-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.admin-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Library Modal */
+.library-modal .modal-content {
+    max-width: 600px;
+}
+
+.library-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.library-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.library-form .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.library-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.library-form input,
+.library-form textarea,
+.library-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.library-form input:focus,
+.library-form textarea:focus,
+.library-form select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.library-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Availability Badge */
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.availability-available {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.availability-unavailable {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.availability-limited {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Empty States */
+.library-empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #6b7280;
+}
+
+.library-empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #d1d5db;
+}
+
+.library-empty-state h3 {
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .library-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .library-search-box {
+        min-width: auto;
+    }
+    
+    .library-select {
+        min-width: auto;
+    }
+    
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .library-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-actions {
+        flex-direction: column;
+    }
+    
+    .admin-actions .btn {
+        justify-content: center;
+    }
+    
+    .book-cover {
+        float: none;
+        margin: 0 auto 1rem auto;
+    }
+    
+    .book-content {
+        text-align: center;
+    }
+    
+    .book-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .loan-header,
+    .reservation-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .library-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation for new items */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.book-card,
+.loan-card,
+.reservation-card {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Loading states for library */
+.library-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    color: #6b7280;
+}
+
+.library-loading::after {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Print styles for library */
+@media print {
+    .book-actions,
+    .admin-actions,
+    .library-filters {
+        display: none !important;
+    }
+    
+    .book-card,
+    .loan-card,
+    .reservation-card {
+        break-inside: avoid;
+        border: 1px solid #000;
+        box-shadow: none !important;
+    }
+}
